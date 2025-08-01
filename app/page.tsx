@@ -36,7 +36,7 @@ export default function HomePage() {
       >
         <motion.div className="mb-8" variants={itemVariants}>
           <Image
-            src="/placeholder.svg?height=160&width=160"
+            src="foto_de_perfil.jpeg"
             alt={messages.profilePictureAlt[language]}
             width={160}
             height={160}
