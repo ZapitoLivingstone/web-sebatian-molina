@@ -29,9 +29,9 @@ export const messages: Messages = {
   shareOnLinkedIn: { es: "Compartir en LinkedIn", en: "Share on LinkedIn" },
   copyLink: { es: "Copiar enlace", en: "Copy link" },
   linkCopied: { es: "Enlace copiado al portapapeles", en: "Link copied to clipboard" },
-  tableOfContents: { es: "Contenido", en: "Table of Contents" },
-  articleNotFound: { es: "Artículo no encontrado", en: "Article not found" },
-  publishedOn: { es: "Publicado el", en: "Published on" },
+  tableOfContents: { es: "Contenido", en: "Table of Contents" }, // Can be removed if no MDX
+  articleNotFound: { es: "Artículo no encontrado", en: "Article not found" }, // Can be removed if no MDX
+  publishedOn: { es: "Publicado el", en: "Published on" }, // Can be removed if no MDX
 
   // Home Page
   fullName: { es: "Sebastián Molina", en: "Sebastián Molina" },
