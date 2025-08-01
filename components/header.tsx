@@ -21,8 +21,8 @@ export function Header() {
       type: "dropdown",
       textKey: "cvOption", // "Mi CV" / "My CV"
       items: [
-        { href: "/about", textKey: "cvSpanish" }, // Link to /about for now
-        { href: "/about", textKey: "cvEnglish" }, // Link to /about for now
+        { href: "/cv-es.pdf", textKey: "cvSpanish", target: "_blank" }, // Link directly to Spanish PDF
+        { href: "/cv-en.pdf", textKey: "cvEnglish", target: "_blank" }, // Link directly to English PDF
       ],
     },
     { type: "link", href: "/research", textKey: "research" },

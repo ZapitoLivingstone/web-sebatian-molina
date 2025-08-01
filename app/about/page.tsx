@@ -1,4 +1,4 @@
-import { messages } from "@/lib/messages" // Added import
+import { messages } from "@/lib/messages"
 import AboutClientPage from "./AboutClientPage"
 
 export const metadata = {
@@ -7,6 +7,5 @@ export const metadata = {
 }
 
 export default function AboutPage() {
-  // No need to pass cvData as a prop if it's imported directly in the client component
   return <AboutClientPage />
 }

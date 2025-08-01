@@ -26,8 +26,12 @@ interface Post {
 
 export default function PostPageClient({ params, post }: { params: { slug: string }; post: Post }) {
   const { language } = useLanguage()
-  const postUrl = `https://your-portfolio-url.com/blog/${post.slug}` // Replace with your actual URL
-  const postTitle = post.frontmatter[`title_${language}` as keyof typeof post.frontmatter]
+  const postUrl = Array.isArray(post.slug)
+    ? `https://your-portfolio-url.com/blog/${post.slug[0]}`
+    : `https://your-portfolio-url.com/blog/${post.slug}` // Replace with your actual URL
+
+  const rawTitle = post.frontmatter[`title_${language}` as keyof typeof post.frontmatter] || post.frontmatter.title || ""
+  const postTitle = Array.isArray(rawTitle) ? rawTitle[0] : rawTitle
 
   const containerVariants = {
     hidden: { opacity: 0 },

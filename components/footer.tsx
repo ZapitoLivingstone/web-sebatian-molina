@@ -36,7 +36,7 @@ export function Footer() {
             <Github className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
             <span className="sr-only">GitHub</span>
           </Link>
-          <Link href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+          <Link href="https://www.linkedin.com/in/sebastianmolina03" target="_blank" rel="noopener noreferrer">
             <Linkedin className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
             <span className="sr-only">LinkedIn</span>
           </Link>

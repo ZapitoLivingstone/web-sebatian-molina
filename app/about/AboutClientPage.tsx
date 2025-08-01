@@ -4,104 +4,63 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
-import { useLanguage } from "@/context/language-context" // Added import
-import { messages } from "@/lib/messages" // Added import
-import { cvData } from "@/lib/cv-data" // Import cvData to use in metadata
+import { useLanguage } from "@/context/language-context"
+import { messages } from "@/lib/messages"
 
 export default function AboutClientPage() {
-  // No need to pass cvData as a prop if it's imported directly in the client component
+  const { language } = useLanguage()
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  }
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1 },
+  }
+
   return (
-    <section className="md:px-20 px-8 py-10">
-      <div className="flex md:flex-row flex-col gap-10">
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          className="md:w-1/2 w-full"
-        >
+    <section className="w-full py-12 md:py-24 lg:py-32 flex items-center justify-center">
+      <motion.div
+        className="container px-4 md:px-6 max-w-4xl grid gap-8 md:grid-cols-2 items-center"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.div className="flex justify-center md:justify-end" variants={itemVariants}>
           <Image
-            src="/images/about-me.png"
-            alt="about-me"
-            width={500}
-            height={500}
-            className="rounded-xl shadow-2xl"
-            priority
+            src="/placeholder.svg?height=300&width=300"
+            alt={messages.profilePictureAlt[language]}
+            width={300}
+            height={300}
+            className="rounded-lg object-cover border-2 border-primary shadow-lg"
           />
         </motion.div>
-
-        <div className="md:w-1/2 w-full flex flex-col gap-5">
-          <motion.h1
-            initial={{ opacity: 0, y: -50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-4xl font-bold"
-          >
-            {messages.aboutMeTitle[useLanguage()]}
+        <motion.div className="space-y-6 text-center md:text-left" variants={itemVariants}>
+          <motion.h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl" variants={itemVariants}>
+            <span>{messages.aboutMeTitle[language]}</span>
           </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-gray-600"
-          >
-            {messages.aboutMeParagraph1[useLanguage()]}
+          <motion.p className="text-lg text-muted-foreground" variants={itemVariants}>
+            <span>{messages.aboutMeParagraph1[language]}</span>
           </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-gray-600"
-          >
-            {messages.aboutMeParagraph2[useLanguage()]}
+          <motion.p className="text-lg text-muted-foreground" variants={itemVariants}>
+            <span>{messages.aboutMeParagraph2[language]}</span>
           </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="flex flex-col gap-3"
-          >
-            <h2 className="font-bold text-xl">{messages.mySkills[useLanguage()]}</h2>
-            <div className="flex flex-wrap gap-3">
-              {cvData.skills.map((skill) => (
-                <span key={skill} className="bg-gray-200 px-3 py-1 rounded-full text-sm">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="flex flex-col gap-3"
-          >
-            <h2 className="font-bold text-xl">{messages.myHobbies[useLanguage()]}</h2>
-            <div className="flex flex-wrap gap-3">
-              {cvData.hobbies.map((hobby) => (
-                <span key={hobby} className="bg-gray-200 px-3 py-1 rounded-full text-sm">
-                  {hobby}
-                </span>
-              ))}
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="flex gap-3 mt-5"
-          >
-            <Link href="/contact">
-              <Button>{messages.contactMe[useLanguage()]}</Button>
-            </Link>
-            <Link href="/projects">
-              <Button variant="secondary">{messages.myProjects[useLanguage()]}</Button>
+          <motion.div variants={itemVariants}>
+            <Link href="/cv-es.pdf" target="_blank" rel="noopener noreferrer" passHref>
+              <Button size="lg" className="px-8 py-3 text-lg">
+                <span>{messages.viewCV[language]}</span>
+              </Button>
             </Link>
           </motion.div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   )
 }

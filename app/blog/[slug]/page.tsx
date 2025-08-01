@@ -51,5 +51,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
     notFound()
   }
 
-  return <PostPageClient params={params} post={post} />
+  // If post.content is a ReactElement, convert it to string if needed, or update the Post type accordingly.
+  // Example: If post.content is Markdown, ensure it's a string here.
+  return <PostPageClient params={params} post={{ ...post, content: typeof post.content === "string" ? post.content : "" }} />
 }

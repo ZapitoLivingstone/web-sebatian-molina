@@ -34,37 +34,41 @@ export default function CVClientPage() {
         animate="visible"
       >
         <motion.div className="text-center" variants={itemVariants}>
-          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">{messages.cvTitle[language]}</h1>
+          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
+            {messages.cvTitle?.[language] ?? ""}
+          </h1>
           <p className="text-lg text-muted-foreground mt-2">
-            {cvData.name} | {cvData.role[language]}
+            {cvData.name} | {cvData.role?.[language] ?? ""}
           </p>
           <p className="text-sm text-muted-foreground">
-            {messages.contactInformation[language]}: {cvData.contactInfo[language]}
+            {messages.contactInformation?.[language] ?? ""}: {cvData.contactInfo?.[language] ?? ""}
           </p>
           <Link href="/cv.pdf" target="_blank" rel="noopener noreferrer" className="mt-4 inline-block">
-            <Button variant="outline">{messages.downloadCV[language]}</Button>
+            <Button variant="outline">{messages.downloadCV?.[language] ?? ""}</Button>
           </Link>
         </motion.div>
 
         <motion.div variants={itemVariants}>
-          <h2 className="text-3xl font-bold mb-6 border-b pb-2">{messages.experience[language]}</h2>
+          <h2 className="text-3xl font-bold mb-6 border-b pb-2">
+            {messages.experience?.[language] ?? ""}
+          </h2>
           <div className="space-y-8">
             {cvData.experience.map((exp, index) => (
               <motion.div key={index} className="grid md:grid-cols-[1fr_auto] gap-2" variants={itemVariants}>
                 <div>
-                  <h3 className="text-xl font-semibold">{exp.title[language]}</h3>
+                  <h3 className="text-xl font-semibold">{exp.title?.[language] ?? ""}</h3>
                   <p className="text-muted-foreground">{exp.company}</p>
                   {exp.description && (
                     <ul className="list-disc list-inside text-sm text-muted-foreground mt-2">
-                      {exp.description[language].map((desc, i) => (
+                      {(exp.description as unknown as Record<string, string[]>)?.[language]?.map((desc: string, i: number) => (
                         <li key={i}>{desc}</li>
                       ))}
                     </ul>
                   )}
                 </div>
                 <div className="text-right text-sm text-muted-foreground">
-                  <p>{exp.duration[language]}</p>
-                  <p>{exp.location[language]}</p>
+                  <p>{exp.duration?.[language] ?? ""}</p>
+                  <p>{exp.location?.[language] ?? ""}</p>
                 </div>
               </motion.div>
             ))}
@@ -72,21 +76,23 @@ export default function CVClientPage() {
         </motion.div>
 
         <motion.div variants={itemVariants}>
-          <h2 className="text-3xl font-bold mb-6 border-b pb-2">{messages.education[language]}</h2>
+          <h2 className="text-3xl font-bold mb-6 border-b pb-2">
+            {messages.education?.[language] ?? ""}
+          </h2>
           <div className="space-y-8">
             {cvData.education.map((edu, index) => (
               <motion.div key={index} className="grid md:grid-cols-[1fr_auto] gap-2" variants={itemVariants}>
                 <div>
-                  <h3 className="text-xl font-semibold">{edu.degree[language]}</h3>
+                  <h3 className="text-xl font-semibold">{edu.degree?.[language] ?? ""}</h3>
                   <p className="text-muted-foreground">{edu.institution}</p>
                   {edu.activities && (
                     <p className="text-sm text-muted-foreground mt-1">
-                      {messages.activitiesAndGroups[language]}: {edu.activities[language]}
+                      {messages.activitiesAndGroups?.[language] ?? ""}: {edu.activities?.[language] ?? ""}
                     </p>
                   )}
                   {edu.focus && (
                     <p className="text-sm text-muted-foreground mt-1">
-                      {messages.focusedOn[language]}: {edu.focus[language]}
+                      {messages.focusedOn?.[language] ?? ""}: {edu.focus?.[language] ?? ""}
                     </p>
                   )}
                 </div>

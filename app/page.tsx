@@ -36,7 +36,7 @@ export default function HomePage() {
       >
         <motion.div className="mb-8" variants={itemVariants}>
           <Image
-            src="foto_de_perfil.jpeg"
+            src="/placeholder.svg?height=160&width=160"
             alt={messages.profilePictureAlt[language]}
             width={160}
             height={160}
@@ -62,7 +62,7 @@ export default function HomePage() {
               <span className="sr-only">GitHub</span>
             </Button>
           </Link>
-          <Link href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+          <Link href="https://www.linkedin.com/in/sebastianmolina03" target="_blank" rel="noopener noreferrer">
             <Button variant="ghost" size="icon" className="rounded-full">
               <Linkedin className="h-6 w-6" />
               <span className="sr-only">LinkedIn</span>
