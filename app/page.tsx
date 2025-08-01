@@ -81,13 +81,14 @@ export default function HomePage() {
             </Button>
           </Link>
         </motion.div>
-        <motion.div variants={itemVariants}>
+        {/* Removed the "View Blog" button as the blog functionality has been removed */}
+        {/* <motion.div variants={itemVariants}>
           <Link href="/blog">
             <Button size="lg" className="px-8 py-3 text-lg">
               <span>{messages.viewBlog[language]}</span>
             </Button>
           </Link>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
     </section>
   )

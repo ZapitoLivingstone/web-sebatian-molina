@@ -1,17 +1,15 @@
 import type { Config } from "tailwindcss"
 
-// all in fixtures is set to tailwind v3 as interims solutions
-
 const config: Config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/**/*.{ts,tsx}", // Added line from updates
-    "./content/**/*.{mdx}", // Added line from updates
+    "./src/**/*.{ts,tsx}",
+    // Removed "./content/**/*.mdx" as blog is removed
   ],
-  prefix: "", // Added line from updates
+  prefix: "",
   theme: {
     container: {
       center: true,
@@ -102,7 +100,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")], // Updated line from updates
+  plugins: [require("tailwindcss-animate")], // Removed require("@tailwindcss/typography")
 }
 
 export default config

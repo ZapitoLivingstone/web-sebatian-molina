@@ -36,7 +36,6 @@ export const metadata: Metadata = {
     description: "Portafolio personal de un desarrollador de software / Personal portfolio of a software developer",
     images: ["/placeholder.svg?height=630&width=1200"], // Replace with your actual image
   },
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({

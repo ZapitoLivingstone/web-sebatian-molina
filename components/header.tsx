@@ -19,15 +19,15 @@ export function Header() {
     { type: "link", href: "/", textKey: "home" },
     {
       type: "dropdown",
-      textKey: "cvOption",
+      textKey: "cvOption", // "Mi CV" / "My CV"
       items: [
-        { href: "/cv", textKey: "cvSpanish" }, // Link to CV page for now
-        { href: "/cv", textKey: "cvEnglish" }, // Link to CV page for now
+        { href: "/about", textKey: "cvSpanish" }, // Link to /about for now
+        { href: "/about", textKey: "cvEnglish" }, // Link to /about for now
       ],
     },
-    { type: "link", href: "/research", textKey: "research" }, // Added Research link
-    { type: "link", href: "/teaching", textKey: "teaching" }, // Added Teaching link
-    { type: "link", href: "/album", textKey: "album" }, // Added Album link
+    { type: "link", href: "/research", textKey: "research" },
+    { type: "link", href: "/teaching", textKey: "teaching" },
+    { type: "link", href: "/album", textKey: "album" },
   ]
 
   const headerVariants = {
