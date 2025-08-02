@@ -27,27 +27,42 @@ export default function AlbumClientPage() {
     {
       src: "/album/esl-class.jpeg",
       alt: "ESL Class Fall 2023",
-      description: "Last ESL class during my time as Neale-Silva scholarship recipient (Fall 2023)",
+      description: {
+        es: "Última clase de ESL durante mi tiempo como beneficiario de la beca Neale-Silva (otoño 2023)",
+        en: "Last ESL class during my time as Neale-Silva scholarship recipient (Fall 2023)",
+      },
     },
     {
       src: "/album/first-day-1.jpeg",
       alt: "First Day at UW-M 1",
-      description: "First day at UW-M",
+      description: {
+        es: "Primer día en UW-M",
+        en: "First day at UW-M",
+      },
     },
     {
       src: "/album/first-day-2.jpeg",
       alt: "First Day at UW-M 2",
-      description: "First day at UW-M",
+      description: {
+        es: "Primer día en UW-M",
+        en: "First day at UW-M",
+      },
     },
     {
       src: "/album/farm-visit-1.jpeg",
       alt: "Visiting the farm 1",
-      description: "Visiting the farm with AAE department!",
+      description: {
+        es: "Visitando la granja con el departamento AAE",
+        en: "Visiting the farm with AAE department!",
+      },
     },
     {
       src: "/album/farm-visit-2.jpeg",
       alt: "Visiting the farm 2",
-      description: "Visiting the farm with AAE department!",
+      description: {
+        es: "Visitando la granja con el departamento AAE",
+        en: "Visiting the farm with AAE department!",
+      },
     },
   ]
 
@@ -90,7 +105,7 @@ export default function AlbumClientPage() {
                   priority={index === 0}
                 />
               </div>
-              <p className="text-sm text-muted-foreground">{image.description}</p>
+              <p className="text-sm text-muted-foreground">{image.description[language]}</p>
             </motion.div>
           ))}
         </motion.div>
