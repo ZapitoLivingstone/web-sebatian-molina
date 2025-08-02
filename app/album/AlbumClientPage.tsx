@@ -64,6 +64,7 @@ export default function AlbumClientPage() {
         en: "Visiting the farm with AAE department!",
       },
     },
+    // Puedes agregar más imágenes aquí, debes dejar las images en la carpeta public/album
   ]
 
   return (
