@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  assetPrefix: '/web-sebatian-molina/',
+  output: 'export',        // para exportar sitio estático
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -11,6 +10,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-};
+  // NO pongas assetPrefix a menos que tengas un subdirectorio real en Netlify
+}
 
 export default nextConfig;
