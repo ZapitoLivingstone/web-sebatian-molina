@@ -24,28 +24,6 @@ export default function ResearchClientPage() {
 
   const links = [
     {
-      url: "https://scholar.google.com/citations?user=PFJvBgwAAAAJ&hl=en",
-      title: {
-        es: "Perfil en Google Scholar",
-        en: "Google Scholar Profile",
-      },
-      description: {
-        es: "Revisa todas las publicaciones y métricas académicas del autor en Google Scholar.",
-        en: "View the author's academic publications and citation metrics on Google Scholar.",
-      },
-    },
-    {
-      url: "https://www.economicas.uach.cl/academico-y-exalumno-de-facea-publican-articulo-sobre-viabilidad-del-biodiesel-en-revista-cientifica-internacional/",
-      title: {
-        es: "Artículo en FACEA - UACh",
-        en: "Article in FACEA - UACh",
-      },
-      description: {
-        es: "Publicación sobre la viabilidad del biodiésel en una revista científica internacional.",
-        en: "Publication on biodiesel feasibility in an international scientific journal.",
-      },
-    },
-    {
       url: "https://doi.org/10.1016/j.biombioe.2025.108197",
       title: {
         es: "Artículo en Biomass & Bioenergy (Elsevier)",
@@ -55,16 +33,9 @@ export default function ResearchClientPage() {
         es: "Investigación científica publicada en la revista Biomass & Bioenergy.",
         en: "Scientific research published in Biomass & Bioenergy journal.",
       },
-    },
-    {
-      url: "https://orcid.org/0009-0007-7446-5213",
-      title: {
-        es: "Perfil ORCID",
-        en: "ORCID Profile",
-      },
-      description: {
-        es: "Identificador digital único con todas las publicaciones asociadas al autor.",
-        en: "Unique digital identifier listing the author's academic contributions.",
+      citation: {
+        es: "Molina, S. y Doussoulin, J.P. (2025). Hacia una bioeconomía circular en países en desarrollo: brecha de rentabilidad en la producción de biodiésel en Chile. *Biomass and Bioenergy*, Vol. 202, 108197.",
+        en: "Molina, S., & Doussoulin, J.P. (2025). Moving towards a circular bioeconomy in developing countries: Profitability gap in Chile’s biodiesel production. *Biomass and Bioenergy*, Vol. 202, 108197.",
       },
     },
   ]
@@ -91,7 +62,10 @@ export default function ResearchClientPage() {
         </motion.p>
         <motion.div className="space-y-6 text-left" variants={itemVariants}>
           {links.map((link, index) => (
-            <motion.div key={index} className="p-4 border rounded-lg hover:bg-muted transition-colors">
+            <motion.div
+              key={index}
+              className="p-4 border rounded-lg hover:bg-muted transition-colors"
+            >
               <a
                 href={link.url}
                 target="_blank"
@@ -100,7 +74,12 @@ export default function ResearchClientPage() {
               >
                 {link.title[language]}
               </a>
-              <p className="text-muted-foreground mt-1">{link.description[language]}</p>
+              <p className="text-muted-foreground mt-1">
+                {link.description[language]}
+              </p>
+              <p className="text-sm text-muted-foreground mt-2 italic">
+                {link.citation[language]}
+              </p>
             </motion.div>
           ))}
         </motion.div>

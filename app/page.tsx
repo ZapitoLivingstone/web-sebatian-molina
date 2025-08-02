@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Mail } from "lucide-react"
+import { Github, Linkedin, Mail, BookOpen } from "lucide-react"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { useLanguage } from "@/context/language-context"
@@ -68,22 +68,23 @@ export default function HomePage() {
               <span className="sr-only">LinkedIn</span>
             </Button>
           </Link>
-
-          <Link href="sebastian.molina03@alumnos.uach.cl">
+          <Link href="mailto:sebastian.molina03@alumnos.uach.cl">
             <Button variant="ghost" size="icon" className="rounded-full">
               <Mail className="h-6 w-6" />
               <span className="sr-only">Email</span>
             </Button>
           </Link>
-        </motion.div>
-        {/* Removed the "View Blog" button as the blog functionality has been removed */}
-        {/* <motion.div variants={itemVariants}>
-          <Link href="/blog">
-            <Button size="lg" className="px-8 py-3 text-lg">
-              <span>{messages.viewBlog[language]}</span>
+          <Link
+            href="https://scholar.google.com/citations?user=PFJvBgwAAAAJ&hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="ghost" size="icon" className="rounded-full">
+              <BookOpen className="h-6 w-6" />
+              <span className="sr-only">Google Scholar</span>
             </Button>
           </Link>
-        </motion.div> */}
+        </motion.div>
       </motion.div>
     </section>
   )
