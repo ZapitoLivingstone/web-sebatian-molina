@@ -36,7 +36,7 @@ export const messages: Messages = {
   // Home Page
   fullName: { es: "Sebastián Molina", en: "Sebastián Molina" },
   role: {
-    es: "Asistente de Investigación | Bci Gestión de Activos | Economía Aplicada y Finanzas",
+    es: "Asistente de Investigación | Bci Asset Management | Economía Aplicada y Finanzas",
     en: "Research Assistant | Bci Asset Management | Applied Economics and Finance",
   },
   bio: {
