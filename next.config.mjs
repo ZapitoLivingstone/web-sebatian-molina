@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/web-sebatian-molina',
   assetPrefix: '/web-sebatian-molina/',
   eslint: {
     ignoreDuringBuilds: true,
