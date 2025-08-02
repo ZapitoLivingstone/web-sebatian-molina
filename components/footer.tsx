@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Github, Linkedin, Twitter, Mail } from "lucide-react"
+import { Github, Linkedin, Mail } from "lucide-react"
 import { motion } from "framer-motion"
 import { useLanguage } from "@/context/language-context" // Added import
 import { messages } from "@/lib/messages" // Added import
@@ -32,17 +32,13 @@ export function Footer() {
           </p>
         </div>
         <div className="flex gap-4">
-          <Link href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+          <Link href="https://github.com/SIMOLINAM" target="_blank" rel="noopener noreferrer">
             <Github className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
             <span className="sr-only">GitHub</span>
           </Link>
           <Link href="https://www.linkedin.com/in/sebastianmolina03" target="_blank" rel="noopener noreferrer">
             <Linkedin className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
             <span className="sr-only">LinkedIn</span>
-          </Link>
-          <Link href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
-            <Twitter className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
-            <span className="sr-only">Twitter</span>
           </Link>
           <Link href="mailto:youremail@example.com">
             <Mail className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />

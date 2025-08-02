@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Twitter, Mail } from "lucide-react"
+import { Github, Linkedin, Mail } from "lucide-react"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { useLanguage } from "@/context/language-context"
@@ -56,7 +56,7 @@ export default function HomePage() {
           <span>{messages.bio[language]}</span>
         </motion.p>
         <motion.div className="flex justify-center gap-4 mb-10" variants={itemVariants}>
-          <Link href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+          <Link href="https://github.com/SIMOLINAM" target="_blank" rel="noopener noreferrer">
             <Button variant="ghost" size="icon" className="rounded-full">
               <Github className="h-6 w-6" />
               <span className="sr-only">GitHub</span>
@@ -68,13 +68,8 @@ export default function HomePage() {
               <span className="sr-only">LinkedIn</span>
             </Button>
           </Link>
-          <Link href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
-            <Button variant="ghost" size="icon" className="rounded-full">
-              <Twitter className="h-6 w-6" />
-              <span className="sr-only">Twitter</span>
-            </Button>
-          </Link>
-          <Link href="mailto:youremail@example.com">
+
+          <Link href="sebastian.molina03@alumnos.uach.cl">
             <Button variant="ghost" size="icon" className="rounded-full">
               <Mail className="h-6 w-6" />
               <span className="sr-only">Email</span>
