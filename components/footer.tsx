@@ -15,6 +15,11 @@ export function Footer() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   }
 
+  const createdByMessages = {
+    es: "Sitio web desarrollado por",
+    en: "Website developed by",
+  }
+
   return (
     <motion.footer
       className="border-t py-8 md:py-12 bg-background"
@@ -29,6 +34,17 @@ export function Footer() {
           </p>
           <p className="text-sm text-muted-foreground">
             &copy; {currentYear} {messages.fullName[language]}. {messages.allRightsReserved[language]}
+          </p>
+          <p className="text-sm text-muted-foreground">
+            {createdByMessages[language]}{" "}
+            <Link
+              href="https://github.com/ZapitoLivingstone"
+              className="underline hover:text-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ZapitoLivingstone
+            </Link>
           </p>
         </div>
         <div className="flex gap-4">
