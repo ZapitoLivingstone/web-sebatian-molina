@@ -7,7 +7,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { LanguageProvider } from "@/context/language-context"
 import { Toaster } from "@/components/ui/sonner"
-import Head from "next/head" // ✅ Asegúrate de importar Head
+import Head from "next/head" 
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -47,7 +47,6 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <Head>
-        {/* ✅ Aquí va el favicon */}
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body className={`${inter.className} flex flex-col min-h-screen`}>
