@@ -1,8 +1,6 @@
 "use client"
 
 import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { useLanguage } from "@/context/language-context"
 import { messages } from "@/lib/messages"
@@ -64,7 +62,7 @@ export default function AboutClientPage() {
             </p>
 
             <a
-              href="letter/carta.pdf"
+              href="Documents/carta.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-5 py-3 bg-primary text-black font-semibold rounded-lg shadow hover:bg-primary/90 transition"

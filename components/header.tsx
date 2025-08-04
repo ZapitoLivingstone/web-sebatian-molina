@@ -30,8 +30,8 @@ export function Header() {
       type: "dropdown",
       textKey: "cvOption",
       items: [
-        { href: "/cv-es.pdf", textKey: "cvSpanish", target: "_blank" },
-        { href: "/cv-en.pdf", textKey: "cvEnglish", target: "_blank" },
+        { href: "cv/cv-es.pdf", textKey: "cvSpanish", target: "_blank" },
+        { href: "cv/cv-en.pdf", textKey: "cvEnglish", target: "_blank" },
       ],
     },
     { type: "link", href: "/research", textKey: "research" },
