@@ -51,25 +51,6 @@ export default function AboutClientPage() {
             <span>{messages.aboutMeParagraph2[language]}</span>
           </motion.p>
         </motion.div>
-          <div className="w-full max-w-3xl mx-auto my-10 text-center">
-            <h2 className="text-2xl font-bold mb-4">
-              {language === "es" ? "Carta de Presentación" : "Letter of Introduction"}
-            </h2>
-            <p className="mb-6 text-muted-foreground">
-              {language === "es"
-                ? "Puedes revisar mi carta de presentación profesional en formato PDF."
-                : "You can review my professional introduction letter in PDF format."}
-            </p>
-
-            <a
-              href="Documents/carta.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-5 py-3 bg-primary text-black font-semibold rounded-lg shadow hover:bg-primary/90 transition"
-            >
-              {language === "es" ? "Ver Carta PDF" : "View PDF Letter"}
-            </a>
-          </div>
       </motion.div>
     </section>
   )
