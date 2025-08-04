@@ -8,10 +8,11 @@ interface Messages {
 export const messages: Messages = {
   // General
   home: { es: "Inicio", en: "Home" },
-  about: { es: "Sobre mí", en: "About" },
+  about: { es: "Sobre mí", en: "About me" },
   research: { es: "Investigación", en: "Research" },
   teaching: { es: "Docencia", en: "Teaching" },
   album: { es: "Álbum", en: "Album" },
+  documents: { es: "Documentos", en: "Documents" },
   cvOption: { es: "Mi CV", en: "My CV" },
   cvSpanish: { es: "CV (Español)", en: "CV (Spanish)" },
   cvEnglish: { es: "CV (Inglés)", en: "CV (English)" },
@@ -77,4 +78,14 @@ export const messages: Messages = {
     es: "Una colección de momentos y proyectos visuales que reflejan mis intereses y pasiones.",
     en: "A collection of visual moments and projects that reflect my interests and passions.",
   },
+  // Documents Page
+  documentsTitle: { 
+    es: "Documentos", 
+    en: "Documents" 
+  },
+  documentsDescription: {
+    es: "Aquí puedes revisar y descargar documentos relevantes en distintos formatos.",
+    en: "Here you can view and download relevant documents in various formats.",
+  },
+
 }

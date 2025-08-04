@@ -37,6 +37,7 @@ export function Header() {
     { type: "link", href: "/research", textKey: "research" },
     { type: "link", href: "/teaching", textKey: "teaching" },
     { type: "link", href: "/album", textKey: "album" },
+    { type: "link", href: "/documents", textKey: "documents" },
   ]
 
   const headerVariants: Variants = {
