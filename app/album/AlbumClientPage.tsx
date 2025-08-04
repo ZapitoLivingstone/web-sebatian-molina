@@ -96,7 +96,12 @@ export default function AlbumClientPage() {
         >
           {albumImages.map((image, index) => (
             <motion.div key={index} className="space-y-2" variants={itemVariants}>
-              <div className="relative w-full h-60 rounded-lg overflow-hidden shadow-md">
+              <a
+                href={image.src}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block relative w-full h-60 rounded-lg overflow-hidden shadow-md"
+              >
                 <Image
                   src={image.src}
                   alt={image.alt}
@@ -105,7 +110,7 @@ export default function AlbumClientPage() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   priority={index === 0}
                 />
-              </div>
+              </a>
               <p className="text-sm text-muted-foreground">{image.description[language]}</p>
             </motion.div>
           ))}
