@@ -24,16 +24,4 @@ export const documents: DocumentItem[] = [
     url: "/documents/carta.pdf",
     format: "PDF",
   },
-  {
-    title: {
-      es: "Carta de Aceptación de Beca",
-      en: "Scholarship Acceptance Letter",
-    },
-    description: {
-      es: "Carta oficial que certifica la aceptación de la beca otorgada.",
-      en: "Official letter certifying the scholarship award acceptance.",
-    },
-    url: "/documents/carta.pdf",
-    format: "PDF",
-  },
 ]
