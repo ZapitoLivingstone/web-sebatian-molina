@@ -4,6 +4,7 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import { useLanguage } from "@/context/language-context"
 import { messages } from "@/lib/messages"
+import { albumImages } from "@/lib/album"
 
 export default function AlbumClientPage() {
   const { language } = useLanguage()
@@ -22,50 +23,6 @@ export default function AlbumClientPage() {
     hidden: { y: 20, opacity: 0 },
     visible: { y: 0, opacity: 1 },
   }
-
-  const albumImages = [
-    {
-      src: "/album/esl-class.jpeg",
-      alt: "ESL Class Fall 2023",
-      description: {
-        es: "Última clase de ESL durante mi tiempo como beneficiario de la beca Neale-Silva (otoño 2023)",
-        en: "Last ESL class during my time as Neale-Silva scholarship recipient (Fall 2023)",
-      },
-    },
-    {
-      src: "/album/first-day-1.jpeg",
-      alt: "First Day at UW-M 1",
-      description: {
-        es: "Primer día en UW-M",
-        en: "First day at UW-M",
-      },
-    },
-    {
-      src: "/album/first-day-2.jpeg",
-      alt: "First Day at UW-M 2",
-      description: {
-        es: "Primer día en UW-M",
-        en: "First day at UW-M",
-      },
-    },
-    {
-      src: "/album/farm-visit-1.jpeg",
-      alt: "Visiting the farm 1",
-      description: {
-        es: "Visitando la granja con el departamento AAE",
-        en: "Visiting the farm with AAE department!",
-      },
-    },
-    {
-      src: "/album/farm-visit-2.jpeg",
-      alt: "Visiting the farm 2",
-      description: {
-        es: "Visitando la granja con el departamento AAE",
-        en: "Visiting the farm with AAE department!",
-      },
-    },
-    // Puedes agregar más imágenes aquí, debes dejar las images en la carpeta public/album
-  ]
 
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 flex items-center justify-center">

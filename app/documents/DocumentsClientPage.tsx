@@ -4,21 +4,7 @@ import { motion } from "framer-motion"
 import { useLanguage } from "@/context/language-context"
 import { messages } from "@/lib/messages"
 import { FileText, Download } from "lucide-react"
-
-const documents = [
-  {
-    title: {
-      es: "Carta de Aceptación de Beca",
-      en: "Scholarship Acceptance Letter",
-    },
-    description: {
-      es: "Carta oficial que certifica la aceptación de la beca otorgada.",
-      en: "Official letter certifying the scholarship award acceptance.",
-    },
-    url: "/documents/carta.pdf",
-    format: "PDF",
-  },
-]
+import { documents } from "@/lib/documents"
 
 const containerVariants = {
   hidden: { opacity: 0 },

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { useLanguage } from "@/context/language-context"
 import { messages } from "@/lib/messages"
+import { researchItems } from "@/lib/research"
 
 export default function ResearchClientPage() {
   const { language } = useLanguage()
@@ -21,24 +22,6 @@ export default function ResearchClientPage() {
     hidden: { y: 20, opacity: 0 },
     visible: { y: 0, opacity: 1 },
   }
-
-  const links = [
-    {
-      url: "https://doi.org/10.1016/j.biombioe.2025.108197",
-      title: {
-        es: "Artículo en Biomass & Bioenergy (Elsevier)",
-        en: "Article in Biomass & Bioenergy (Elsevier)",
-      },
-      description: {
-        es: "Investigación científica publicada en la revista Biomass & Bioenergy.",
-        en: "Scientific research published in Biomass & Bioenergy journal.",
-      },
-      citation: {
-        es: "Molina, S. y Doussoulin, J.P. (2025). Hacia una bioeconomía circular en países en desarrollo: brecha de rentabilidad en la producción de biodiésel en Chile. *Biomass and Bioenergy*, Vol. 202, 108197.",
-        en: "Molina, S., & Doussoulin, J.P. (2025). Moving towards a circular bioeconomy in developing countries: Profitability gap in Chile’s biodiesel production. *Biomass and Bioenergy*, Vol. 202, 108197.",
-      },
-    },
-  ]
 
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 flex items-center justify-center">
@@ -61,7 +44,7 @@ export default function ResearchClientPage() {
           <span>{messages.researchDescription[language]}</span>
         </motion.p>
         <motion.div className="space-y-6 text-left" variants={itemVariants}>
-          {links.map((link, index) => (
+          {researchItems.map((link, index) => (
             <motion.div
               key={index}
               className="p-4 border rounded-lg hover:bg-muted transition-colors"

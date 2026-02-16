@@ -50,6 +50,9 @@ export default function AboutClientPage() {
           <motion.p className="text-lg text-muted-foreground" variants={itemVariants}>
             <span>{messages.aboutMeParagraph2[language]}</span>
           </motion.p>
+          <motion.p className="text-lg text-muted-foreground" variants={itemVariants}>
+            <span>{messages.aboutMeParagraph3[language]}</span>
+          </motion.p>
         </motion.div>
       </motion.div>
     </section>
